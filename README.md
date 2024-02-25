@@ -1,1 +1,6 @@
-# QuotesApp
+1.[Screenshot (20)](https://github.com/mounikh/QuotesApp/assets/95080157/cb6ada2d-1d07-4c3e-b77e-0295a9193ce1)
+2.![Screenshot (19)](https://github.com/mounikh/QuotesApp/assets/95080157/dc1bed1b-db74-42e5-a12e-1a5f72be3ca1)
+3.![Screenshot (18)](https://github.com/mounikh/QuotesApp/assets/95080157/e5447f87-9b9e-437d-917a-377834c00111)
+4.![Screenshot (17)](https://github.com/mounikh/QuotesApp/assets/95080157/891b3422-5a4a-4fbd-884b-3f3fe89b07a1)
+5.![Screenshot (16)](https://github.com/mounikh/QuotesApp/assets/95080157/e22050e4-3e06-4a70-b22f-bcfcc3836321)
+6.![Screenshot (15)](https://github.com/mounikh/QuotesApp/assets/95080157/1c82a960-edf0-4fdc-ab52-f642c008a6e0)
