@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socialize</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles here */
+        .service-details {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            color: #1a2a4a;
+            margin-bottom: 30px;
+        }
+
+        .service-info {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .btn-hover {
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .btn-hover:hover {
+            background-color: #e09030;
+            border-color: #e09030;
+        }
+
+        .jumbotron {
+            background-image: url("C:\\Users\\Boopal\\Downloads\\pexels-павел-сорокин-2324837.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            /* Adjusted padding */
+        }
+
+        .navbar {
+            background-color: #1a2a4a;
+        }
+
+        .nav-link {
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #f2a154;
+        }
+
+        .section-title {
+            color: #1a2a4a;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #1a2a4a;
+            color: white;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .card:hover .card-img-top {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #82c8e6;
+        }
+
+        .card-text {
+            color: white;
+        }
+
+        .btn-primary {
+            background-color: #f2a154;
+            border-color: #f2a154;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e09030;
+            border-color: #e09030;
+        }
+
+        footer {
+            background-color: #1a2a4a;
+            color: white;
+            padding: 15px 0;
+            transition: background-color 0.3s;
+        }
+
+        footer:hover {
+            background-color: #142038;
+        }
+
+        .btn-hover {
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .btn-hover:hover {
+            background-color: #e09030;
+            border-color: #e09030;
+        }
+
+        /* Change font color of "Share your thoughts here" */
+        .thoughts-text {
+            color: black;
+        }
+
+        /* Reduce size of text box */
+        .form-control {
+            height: 40px;
+            /* Adjusted height */
+            width: 350px;
+            /* Adjusted width */
+        }
+		/* Add loading animation for contact us section */
+.loading-circle {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.loading-circle:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border: 2px solid transparent;
+    border-top-color: #f2a154;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f2a154;
+    font-weight: bold;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.edit-options {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .edit-options.show {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #1a2a4a;">
+        <a class="navbar-brand" href="#" style="color: white;">Bringing Together People and Happiness</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home" style="color: white;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services" style="color: white;">Edit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help.txt" style="color: white;">Help</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Search bar -->
+        <form class="form-inline my-2 my-lg-0 mr-3">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+			<a href="#suggestions">Search</a>
+        </form>
+        <!-- Logout button -->
+        <a class="nav-link" href="login.html" style="color: white;">Logout</a>
+    </nav>
+
+
+    <section id="home" class="jumbotron text-center">
+        <h1 class="display-4"></h1>
+        <div class="d-flex flex-column align-items-center">
+            <div class="d-flex align-items-center justify-content-center rounded-circle overflow-hidden mb-3"
+                style="width: 100px; height: 100px; background-color: #f0f0f0;">
+                <img src="dp.jpg" alt="User Image" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p class="lead thoughts-text">Share your thoughts here.</p>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <input type="text" id="thoughtHeading" class="form-control mb-2" placeholder="Enter thought heading...">
+            <input type="text" id="thoughtContent" class="form-control mb-2" placeholder="Enter your thought...">
+        </div>
+        <a href="#" class="btn btn-primary btn-lg btn-hover mt-3" id="postButton" disabled>Post</a>
+        <p id="warning" style="color: red; display: none;">Please fill out both fields before posting.</p>
+    </section>
+
+
+<!-- Services Section -->
+<section id="services" class="container" style="background-color: #f0f8ff;">
+    <h2 class="section-title text-center mb-4" style="color: #1f4e78;">Public Posts</h2>
+    <div class="row">
+        <!-- Example post card -->
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Phenomenal Women</h5>
+                    <p class="card-text">Pretty women wonder where my secret lies.
+I'm not cute or built to suit a fashion model's size
+But when I start to tell them,
+They think I'm telling lies.</p>
+                    <!-- Comments section -->
+                    <div class="comments-section">
+                        <h6>Comments</h6>
+                        <ul class="list-unstyled comments-list">
+                            <!-- Example comment -->
+                            <li>Nice post!</li>
+                            <li>Keep it up!</li>
+                        </ul>
+                    </div>
+                    <!-- Input field for new comment -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control new-comment-input" placeholder="Add a comment...">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary add-comment-btn" type="button">Add</button>
+                        </div>
+                    </div>
+                    <!-- Like button -->
+                    <button type="button" class="btn btn-primary like-button">Like <span class="like-count">0</span></button>
+                </div>
+            </div>
+        </div>
+		
+		<div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Road Not Taken</h5>
+                    <p class="card-text">Two roads diverged in a yellow wood,
+And sorry I could not travel both
+And be one traveler, long I stood
+And looked down one as far as I could</p>
+                    <!-- Comments section -->
+                    <div class="comments-section">
+                        <h6>Comments</h6>
+                        <ul class="list-unstyled comments-list">
+                            <!-- Example comment -->
+                            <li>Good!</li>
+                            <li>Great job</li>
+                        </ul>
+                    </div>
+                    <!-- Input field for new comment -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control new-comment-input" placeholder="Add a comment...">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary add-comment-btn" type="button">Add</button>
+                        </div>
+                    </div>
+                    <!-- Like button -->
+                    <button type="button" class="btn btn-primary like-button">Like <span class="like-count">0</span></button>
+                </div>
+            </div>
+        </div>
+		
+		<div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Still I Rise</h5>
+                    <p class="card-text">You may write me down in history
+With your bitter, twisted lies,
+You may tread me in the very dirt
+But still, like dust, I'll rise.</p>
+                    <!-- Comments section -->
+                    <div class="comments-section">
+                        <h6>Comments</h6>
+                        <ul class="list-unstyled comments-list">
+                            <!-- Example comment -->
+                            <li>Makes good sense</li>
+                            <li>Continue more</li>
+                        </ul>
+                    </div>
+                    <!-- Input field for new comment -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control new-comment-input" placeholder="Add a comment...">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary add-comment-btn" type="button">Add</button>
+                        </div>
+                    </div>
+                    <!-- Like button -->
+                    <button type="button" class="btn btn-primary like-button">Like <span class="like-count">0</span></button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the above card div for each post -->
+    </div>
+</section>
+
+<script>
+    // Add event listener to add comment buttons
+    var addCommentButtons = document.querySelectorAll('.add-comment-btn');
+    addCommentButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var inputField = button.closest('.card-body').querySelector('.new-comment-input');
+            var comment = inputField.value.trim();
+            if (comment !== '') {
+                var commentsList = button.closest('.card-body').querySelector('.comments-list');
+                var newComment = document.createElement('li');
+                newComment.textContent = comment;
+                commentsList.appendChild(newComment);
+                inputField.value = '';
+            }
+        });
+    });
+
+    // Add event listener to like buttons
+    var likeButtons = document.querySelectorAll('.like-button');
+    likeButtons.forEach(function(button) {
+        var countSpan = button.querySelector('.like-count');
+        var count = 0;
+        button.addEventListener('click', function() {
+            count++;
+            countSpan.textContent = count;
+        });
+    });
+</script>
+
+
+
+<!-- Suggestions Section -->
+<section id="suggestions" class="bg-light py-5">
+    <div class="container" style="background-color: #f0f8ff;">
+        <h2 class="section-title text-center mb-4">Suggestions</h2>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First carousel item -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Cards for the first set of suggestions -->
+                        <!-- Example card 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-center rounded-circle overflow-hidden mb-3"
+                                        style="width: 100px; height: 100px; background-color: #f0f0f0;">
+                                        <img src="dp1.jpeg" alt="User Image"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <h5 class="card-title text-center">Ana</h5> <!-- Name added here -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Example card 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-center rounded-circle overflow-hidden mb-3"
+                                        style="width: 100px; height: 100px; background-color: #f0f0f0;">
+                                        <img src="dp2.jpeg" alt="User Image"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <h5 class="card-title text-center">Allwin</h5> <!-- Name added here -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Example card 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-center rounded-circle overflow-hidden mb-3"
+                                        style="width: 100px; height: 100px; background-color: #f0f0f0;">
+                                        <img src="dp3.jpeg" alt="User Image"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <h5 class="card-title text-center">Boopal</h5> <!-- Name added here -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Repeat the above card div for each suggestion -->
+                    </div>
+                </div>
+                <!-- Second carousel item -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Cards for the second set of suggestions -->
+                        <!-- Example card 4 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-center rounded-circle overflow-hidden mb-3"
+                                        style="width: 100px; height: 100px; background-color: #f0f0f0;">
+                                        <img src="dp4.jpeg" alt="User Image"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <h5 class="card-title text-center">Nirubhama</h5> <!-- Name added here -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Example card 5 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-center rounded-circle overflow-hidden mb-3"
+                                        style="width: 100px; height: 100px; background-color: #f0f0f0;">
+                                        <img src="dp5.jpeg" alt="User Image"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <h5 class="card-title text-center">Nirmal</h5> <!-- Name added here -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Example card 6 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center justify-content-center rounded-circle overflow-hidden mb-3"
+                                        style="width: 100px; height: 100px; background-color: #f0f0f0;">
+                                        <img src="dp6.jpeg" alt="User Image"
+                                            style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <h5 class="card-title text-center">Sreemathi</h5> <!-- Name added here -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Repeat the above card div for each suggestion -->
+                    </div>
+                </div>
+                <!-- Repeat the carousel items as needed for more suggestions -->
+            </div>
+            <!-- Carousel navigation controls -->
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Dreams</h5>
+                    <p class="card-text">Hold fast to dreams
+For if dreams die
+Life is a broken-winged bird
+That cannot fly.</p>
+                    <!-- Comments section -->
+                    <div class="comments-section">
+                        <h6>Comments</h6>
+                        <ul class="list-unstyled comments-list">
+                            <!-- Example comment -->
+                            <li>Makes good sense</li>
+                            <li>Continue more</li>
+                        </ul>
+                    </div>
+                    <!-- Input field for new comment -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control new-comment-input" placeholder="Add a comment...">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary add-comment-btn" type="button">Add</button>
+                        </div>
+                    </div>
+                    <!-- Like button -->
+                    <button type="button" class="btn btn-primary like-button">Like <span class="like-count">0</span></button>
+                </div>
+            </div>
+        </div>
+		
+		
+		<div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Caged Bird</h5>
+                    <p class="card-text">The free bird leaps
+on the back of the wind
+and floats downstream
+till the current ends</p>
+                    <!-- Comments section -->
+                    <div class="comments-section">
+                        <h6>Comments</h6>
+                        <ul class="list-unstyled comments-list">
+                            <!-- Example comment -->
+                            <li>Keep going !!!</li>
+                            <li>In love with it</li>
+							<li>So relatable!!</li>
+                        </ul>
+                    </div>
+                    <!-- Input field for new comment -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control new-comment-input" placeholder="Add a comment...">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary add-comment-btn" type="button">Add</button>
+                        </div>
+                    </div>
+                    <!-- Like button -->
+                    <button type="button" class="btn btn-primary like-button">Like <span class="like-count">0</span></button>
+                </div>
+            </div>
+        </div>
+
+
+
+   <!-- Contact Section -->
+<section id="contact" class="container">
+    <h2 class="section-title text-center mb-4"></h2>
+    <div class="row">
+        <!-- Your contact form here -->
+        <div class="col-md-12 text-center">
+            <div class="loading-circle"><span class="loading-text">...</span></div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>&copy; SOCIALIZE - BRINGING THE WORLD TOGETHER</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Function to enable or disable the post button based on input fields
+        function togglePostButton() {
+            var thoughtHeading = document.getElementById('thoughtHeading').value.trim();
+            var thoughtContent = document.getElementById('thoughtContent').value.trim();
+            var postButton = document.getElementById('postButton');
+            var warning = document.getElementById('warning');
+
+            if (thoughtHeading !== '' && thoughtContent !== '') {
+                postButton.disabled = false;
+                warning.style.display = 'none';
+            } else {
+                postButton.disabled = true;
+                warning.style.display = 'block';
+            }
+        }
+
+        // Add event listeners to input fields to toggle post button
+        document.getElementById('thoughtHeading').addEventListener('input', togglePostButton);
+        document.getElementById('thoughtContent').addEventListener('input', togglePostButton);
+
+        // Function to handle posting
+        document.getElementById('postButton').addEventListener('click', function () {
+            var thoughtHeading = document.getElementById('thoughtHeading').value;
+            var thoughtContent = document.getElementById('thoughtContent').value;
+            if (thoughtHeading.trim() !== '' && thoughtContent.trim() !== '') {
+                var card = document.createElement('div');
+                card.classList.add('col-md-12', 'mb-4');
+                card.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${thoughtHeading}</h5>
+                        <p class="card-text">${thoughtContent}</p>
+                    </div>
+                </div>
+            `;
+                document.querySelector('.row').appendChild(card);
+                document.getElementById('thoughtHeading').value = '';
+                document.getElementById('thoughtContent').value = '';
+                document.getElementById('postButton').disabled = true; // Disable button after posting
+            }
+        });
+		
+        // Add event listener to edit buttons
+        var editButtons = document.querySelectorAll('.edit-button');
+        editButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent click event from reaching document
+                var cardBody = button.closest('.card-body');
+                var editOptions = cardBody.querySelector('.edit-options');
+                editOptions.classList.toggle('show'); // Toggle visibility of edit options
+            });
+        });
+
+        // Add event listener to document to hide edit options when clicking outside
+        document.addEventListener('click', function(event) {
+            var editOptions = document.querySelectorAll('.edit-options.show');
+            editOptions.forEach(function(options) {
+                if (!event.target.closest('.edit-options')) {
+                    options.classList.remove('show'); // Hide edit options if clicked outside
+                }
+            });
+        });
+
+        // Add event listener to delete buttons
+        var deleteButtons = document.querySelectorAll('.delete-button');
+        deleteButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent click event from reaching document
+                var card = button.closest('.col-md-12');
+                card.remove(); // Remove the entire card when delete button is clicked
+            });
+        });
+
+        // Add event listener to save buttons (if editing functionality is required)
+        var saveButtons = document.querySelectorAll('.save-button');
+        saveButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                // Implement save functionality if needed
+                // This could involve updating the content of the card
+            });
+        });
+		var helpButton = document.querySelector('.help-button');
+        helpButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default behavior of anchor tag
+            navigateToHelp(); // Call function to navigate to help file
+        });
+
+        // Function to navigate to help file
+        function navigateToHelp() {
+            window.location.href = 'help.txt'; // Change window location to help.txt
+        }
+
+    </script>
+</body>
+
+</html>
